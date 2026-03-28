@@ -52,7 +52,7 @@ public class ArticleRepositories : IArticleRepositories
     public Task<List<Article>> GetPublishedAsync()
     {
         return _context.Article
-            .OrderByDescending(a => a.IsPublished)
+            .OrderByDescending(a => a.Id)
             .ToListAsync();
     }
 
