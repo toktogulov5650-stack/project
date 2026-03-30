@@ -17,7 +17,7 @@ public static class ServiceCollectionExtensions
         IConfiguration configuration)
     {
         services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<INewsRepository, NewsRepository>();
         services.AddScoped<INewsService, NewsService>();
