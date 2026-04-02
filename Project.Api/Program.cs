@@ -14,7 +14,7 @@ builder.Services.AddProjectServices(builder.Configuration);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
-    { 
+    {
         policy
             .AllowAnyOrigin()
             .AllowAnyMethod()
