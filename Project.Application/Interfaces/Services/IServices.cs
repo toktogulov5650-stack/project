@@ -11,5 +11,5 @@ public interface IServices<TManageDto, TPublicDto, TCreateRequest, TUpdateReques
     Task<TManageDto?> UpdateAsync(int id, TUpdateRequest request);
     Task<bool> DeleteAsync(int id);
     Task<List<TPublicDto>> GetPublicListAsync();
-    Task<TPublicDto> GetPublicByIdAsync(int id);
+    Task<TPublicDto?> GetPublicByIdAsync(int id);
 }
