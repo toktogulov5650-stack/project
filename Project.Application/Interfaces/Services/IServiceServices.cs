@@ -1,21 +1,10 @@
 ﻿using Project.Application.DTOs.Service;
+using Project.Application.Interfaces.Services;
 
 
 namespace Project.Application.Interfaces.Services;
 
-public interface IServiceServices
+public interface IServiceServices : 
+    IServices<ServiceManageDto, ServicePublicDto, ServiceCreateRequest, ServiceUpdateRequest>
 {
-    Task<List<ServiceManageDto>> GetManageListAsync();
-
-    Task<ServiceManageDto?> GetManageById(int id);
-
-    Task<ServiceManageDto> CreateAsync(ServiceCreateRequest request);
-
-    Task<ServiceManageDto?> UpdateAsync(int id, ServiceUpdateRequest request);
-
-    Task<bool> DeleteAsync(int id);
-
-    Task<List<ServicePublicDto>> GetPublicListAsync();
-
-    Task<ServicePublicDto?> GetPublicByIdAsync(int id);
 }

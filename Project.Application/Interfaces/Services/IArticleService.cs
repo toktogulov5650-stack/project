@@ -1,20 +1,10 @@
-﻿using Project.Application.DTOs.Article;
+﻿using Project.Application.DTOs;
+using Project.Application.DTOs.Article;
+using Project.Application.Services;
 
 namespace Project.Application.Interfaces.Services;
 
-public interface IArticleService
+public interface IArticleService : 
+    IServices<ArticleManageDto, ArticlePublicDto, ArticleCreateRequest, ArticleUpdateRequest>
 {
-    Task<List<ArticleManageDto>> GetManageListAsync();
-
-    Task<ArticleManageDto?> GetManageByIdAsync(int id);
-
-    Task<ArticleManageDto> CreateAsync(ArticleCreateRequest request);
-
-    Task<ArticleManageDto?> UpdateAsync(int id, ArticleUpdateRequest request);
-
-    Task<bool> DeleteAsync(int id);
-
-    Task<List<ArticlePublicDto>> GetPublicListAsync();
-
-    Task<ArticlePublicDto?> GetPublicByIdAsync(int id);
 }
