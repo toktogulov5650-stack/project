@@ -27,7 +27,7 @@ public class ServiceServices : IServiceServices
     }
 
 
-    public async Task<ServiceManageDto?> GetManageById(int id)
+    public async Task<ServiceManageDto?> GetManageByIdAsync(int id)
     {
         var service = await _serviceRepositories.GetByIdAsync(id);
         return service?.ToManageDto();
