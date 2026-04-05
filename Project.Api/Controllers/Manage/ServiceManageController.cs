@@ -28,7 +28,7 @@ public class ServiceManageController : ControllerBase
     [HttpGet("{id:int}")]
     public async Task<IActionResult> GetById(int id)
     {
-        var result = await _serviceServices.GetManageById(id);
+        var result = await _serviceServices.GetManageByIdAsync(id);
         return Ok(result);
     }
 
